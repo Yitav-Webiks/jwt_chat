@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צ'אט Socket.IO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login">
+        <h2>כניסה לצ'אט</h2>
+        <form id="login-form">
+            <input type="text" id="name-input" placeholder="שם משתמש" required><br><br>
+            <input type="text" id="room-input" placeholder="שם החדר" required><br><br>
+            <button type="submit">כניסה לצ'אט</button>
+        </form>
+    </div>
+
+    <div id="chat">
+        <div id="sidebar">
+            <h2>משתמשים בחדר</h2>
+            <ul id="users"></ul>
+        </div>
+        <div id="main">
+            <div id="messages"></div>
+            <div id="typing"></div>
+            <form id="chat-form">
+                <input id="chat-input" type="text" autocomplete="off" placeholder="הקלד הודעה...">
+                <button>שלח</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
